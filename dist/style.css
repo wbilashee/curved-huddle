@@ -24,4 +24,90 @@ h1,
 h2,
 h3 {
   font-family: "Poppins", sans-serif;
+}
+
+button,
+.button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+  transition: all 300ms ease-in-out;
+}
+button::before,
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: opacity 150ms ease-in-out;
+}
+button:hover::before,
+.button:hover::before {
+  opacity: 1;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.container--px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 48em) {
+  .header {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+.header__logo {
+  width: 7.25rem;
+}
+@media (min-width: 48em) {
+  .header__logo {
+    width: 13.25rem;
+  }
+}
+.header__button {
+  color: hsl(322deg, 100%, 66%);
+  font-size: 0.75rem;
+  background: white;
+  border-radius: 1.2rem;
+  border: 1px solid hsl(322deg, 100%, 66%);
+  padding: 0.25rem 1.25rem;
+}
+.header__button::before {
+  border-radius: 1.2rem;
+}
+@media (min-width: 48em) {
+  .header__button {
+    font-size: 0.9375rem;
+    padding: 0.5rem 1.75rem;
+  }
 }/*# sourceMappingURL=style.css.map */
