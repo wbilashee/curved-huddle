@@ -17,12 +17,15 @@
 
   &__button {
     color: $pink;
+    box-shadow: none;
+    font-weight: 400;
     font-size: 0.75rem;
     background: white;
     border-radius: 1.2rem;
+    letter-spacing: normal;
     border: 1px solid $pink;
     padding: 0.25rem 1.25rem;
-
+    
     &::before {
       border-radius: 1.2rem;
     }
