@@ -12,12 +12,7 @@ html {
 }
 
 body {
-  font-size: 1rem;
   font-family: $baseFont;
-
-  @include breakpoint-up(medium) {
-    font-size: 1.125rem;
-  }
 }
 
 a {
@@ -25,7 +20,9 @@ a {
 }
 
 p {
+  line-height: 1.5;
   color: $grayishBlue;
+  text-shadow: 0 0 #88d;
 }
 
 h1,
@@ -83,12 +80,17 @@ button,
 
 // Spacing
 .container {
-  max-width: 80rem;
+  max-width: 72rem;
   margin: 0 auto;
 
   &--px {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @include breakpoint-up(medium) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }
 
@@ -123,5 +125,18 @@ button,
 
   &-ji-c {
     justify-items: center;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
   }
 }

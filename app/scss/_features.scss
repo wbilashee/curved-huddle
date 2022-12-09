@@ -1,0 +1,64 @@
+.feature {
+  margin-bottom: 7.5rem;
+
+  &__top__bg,
+  &__bottom__bg {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding: 4rem 0;
+    margin: -0.5rem auto;
+    background: #f6fbff;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 8rem;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+
+      @include breakpoint-up(medium) {
+        font-size: 2.35rem;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      color: $veryDarkCyan;
+
+      @include breakpoint-up(medium) {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  &__image {
+    order: -1;
+
+    @include breakpoint-up(medium) {
+      order: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

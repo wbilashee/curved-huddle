@@ -1,12 +1,11 @@
 .hero {
   max-width: 63rem;
-  padding: 0 1.5rem;
-  margin: 5rem auto;
+  margin: 5rem auto 1.5rem;
   grid-template-columns: 1fr;
   row-gap: 6.5rem;
 
   @include breakpoint-up(medium) {
-    margin: 9rem auto;
+    margin: 9rem auto 8rem;
   }
 
   &__text {
@@ -22,10 +21,8 @@
 
     p {
       width: auto;
-      line-height: 1.5;
       font-size: 0.875rem;
       color: $veryDarkCyan;
-      text-shadow: 0px 0px 0px;
       margin: 1.5rem auto 2.65rem;
 
       @include breakpoint-up(medium) {

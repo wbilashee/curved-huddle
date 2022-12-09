@@ -1,10 +1,10 @@
 .header {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  max-width: 80rem;
 
   @include breakpoint-up(medium) {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+    padding: 4.5rem 1.5rem;
   }
 
   &__logo {
@@ -25,7 +25,7 @@
     letter-spacing: normal;
     border: 1px solid $pink;
     padding: 0.25rem 1.25rem;
-    
+
     &::before {
       border-radius: 1.2rem;
     }
