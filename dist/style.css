@@ -318,4 +318,23 @@ button:hover::before,
 }
 .feature__image img {
   width: 100%;
+}
+
+.ready-to-build {
+  text-align: center;
+  margin: 0 auto 15rem;
+}
+@media (min-width: 48em) {
+  .ready-to-build {
+    margin: 10rem auto;
+  }
+}
+.ready-to-build h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2.375rem;
+}
+@media (min-width: 48em) {
+  .ready-to-build h1 {
+    font-size: 2.3125rem;
+  }
 }/*# sourceMappingURL=style.css.map */

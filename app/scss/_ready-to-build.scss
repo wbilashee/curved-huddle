@@ -1,0 +1,17 @@
+.ready-to-build {
+  text-align: center;
+  margin: 0 auto 15rem;
+
+  @include breakpoint-up(medium) {
+    margin: 10rem auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2.375rem;
+
+    @include breakpoint-up(medium) {
+      font-size: 2.3125rem;
+    }
+  }
+}
