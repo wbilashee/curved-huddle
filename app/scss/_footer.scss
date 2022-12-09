@@ -1,0 +1,199 @@
+.footer {
+  p,
+  a,
+  h2 {
+    color: $veryPaleBlue;
+  }
+
+  &__top__bg {
+    img {
+      width: 100%;
+    }
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  &__content {
+    margin-top: -0.5rem;
+    padding: 4rem 0 3rem;
+    background: $veryDarkCyan;
+
+    @include breakpoint-up(medium) {
+      padding: 6.5rem 0 4rem;
+    }
+  }
+
+  &__container {
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: 1.3fr 1fr;
+    }
+  }
+
+  &__item {
+    grid-template-columns: 1fr;
+    row-gap: 1.75rem;
+
+    h2 {
+      font-weight: 600;
+      font-size: 1.25rem;
+      font-family: $baseFont;
+      text-transform: uppercase;
+
+      @include breakpoint-up(medium) {
+        font-size: 1.35rem;
+      }
+    }
+
+    &:first-child {
+      p {
+        width: auto;
+
+        @include breakpoint-up(medium) {
+          width: 50%;
+        }
+      }
+    }
+
+    &:last-child {
+      order: -1;
+
+      @include breakpoint-up(medium) {
+        order: 0;
+      }
+
+      p {
+        width: auto;
+
+        @include breakpoint-up(medium) {
+          width: 75%;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    width: 12.5rem;
+
+    @include breakpoint-up(medium) {
+      width: 13.5rem;
+    }
+  }
+
+  &__desc {
+    line-height: 1.75;
+    font-size: 0.85rem;
+
+    @include breakpoint-up(medium) {
+      font-size: 0.9375rem;
+    }
+  }
+
+  &__address {
+    &__item {
+      grid-template-columns: 0.125fr 1fr;
+
+      @include breakpoint-up(medium) {
+        grid-template-columns: 0.065fr 1fr;
+      }
+
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+
+      img {
+        width: auto;
+
+        @include breakpoint-up(medium) {
+          width: 1.125rem;
+        }
+      }
+    }
+  }
+
+  &__form {
+    grid-template-columns: 1fr;
+    justify-items: end;
+    row-gap: 1rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: 2fr 1fr;
+      justify-items: unset;
+      column-gap: 2rem;
+    }
+
+    #email {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      padding: 0.75rem 1rem;
+      font-family: $baseFont;
+      border: 1px solid transparent;
+    }
+
+    .button {
+      font-size: 1rem;
+      box-shadow: none;
+      border-radius: 5px;
+      color: $veryPaleBlue;
+      padding: 0.8125rem 2rem;
+
+      @include breakpoint-up(medium) {
+        padding: 0.8125rem 1.25rem;
+      }
+
+      &::before {
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &__social {
+    margin: 2.75rem auto 2rem;
+
+    @include breakpoint-up(medium) {
+      margin: 4rem auto 2rem;
+    }
+
+    a {
+      &:not(:last-child) {
+        margin-right: 0.75rem;
+
+        @include breakpoint-up(medium) {
+          margin-right: 1.25rem;
+        }
+      }
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        @include breakpoint-up(medium) {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        path {
+          transition: all 150ms ease-in-out;
+        }
+      }
+
+      &:hover {
+        path {
+          fill: $pink;
+        }
+      }
+    }
+  }
+
+  &__attribution {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+}
