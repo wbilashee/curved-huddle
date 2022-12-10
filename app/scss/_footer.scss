@@ -116,6 +116,7 @@
   }
 
   &__form {
+    position: relative;
     grid-template-columns: 1fr;
     justify-items: end;
     row-gap: 1rem;
@@ -135,6 +136,23 @@
       padding: 0.75rem 1rem;
       font-family: $baseFont;
       border: 1px solid transparent;
+
+      &.invalid {
+        border: 1px solid $lightRed;
+      }
+    }
+
+    .error {
+      color: $lightRed;
+      position: absolute;
+      left: 0;
+      bottom: -2.25rem;
+      font-size: 0.85rem;
+      visibility: hidden;
+
+      @include breakpoint-up(medium) {
+        bottom: -1.625rem;
+      }
     }
 
     .button {
